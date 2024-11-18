@@ -95,6 +95,7 @@
     	sub $t2, $t2, $s2		# end - start time
     	div $t2, $t2, 1000		# milliseconds to seconds conversion
     	div $t1, $t2, 60		# seconds to minutes conversion
+	mfhi $t2			# store seconds
     	
     	# print time elapsed
     	li $v0, SysPrintString		# print prompt to get user's choice of card
@@ -225,6 +226,7 @@
     	sub $t2, $t2, $s2		# end - start time
     	div $t2, $t2, 1000		# milliseconds to seconds conversion
     	div $t1, $t2, 60		# seconds to minutes conversion
+	mfhi $t2			# store seconds
     	
     	# print time elapsed
     	li $v0, SysPrintInt		# print prompt to get user's choice of card
